@@ -1,5 +1,3 @@
-package com.loginform;
-
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -15,13 +13,11 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 
 public class RegistrationForm extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-
         //Setting title of the stage
         stage.setTitle("Registration Form");
 
@@ -71,7 +67,7 @@ public class RegistrationForm extends Application {
         chb.setIndeterminate(false);
         chb2.setIndeterminate(false);
         chb3.setIndeterminate(false);
-
+        //adding checkboxes to the grid
         grid.add(chb,1,5);
         grid.add(chb2,2,5);
         grid.add(chb3,3,5);
@@ -89,17 +85,15 @@ public class RegistrationForm extends Application {
         hb.setSpacing(15);
         hb.setAlignment(Pos.BOTTOM_LEFT);
         hb.setPrefWidth(70);
-
         //Register Button
         Button btn = new Button("Register");
         btn.setMinWidth(hb.getPrefWidth());
         btn.setMaxWidth(Double.MAX_VALUE);
-
         //Quit Button
         Button quitBtn = new Button("Quit");
         quitBtn.setMinWidth(hb.getPrefWidth());
         btn.setMaxWidth(Double.MAX_VALUE);
-        //adding both buttons to HBox and adding the HBox to the grid
+        //Adding both buttons to HBox and adding the HBox to the grid
         hb.getChildren().setAll(quitBtn,btn);
         grid.add(hb,0,7);
 
